@@ -59,6 +59,14 @@ Add-PnPNavigationNode -Title "Wiki" -Location "QuickLaunch" -Url "wiki/"
 
 Adds a navigation node to the quicklaunch. The navigation node will have the title "Wiki" and will link to Wiki library on the selected Web.
 
+### EXAMPLE 6
+```powershell
+$Node = Add-PnPNavigationNode -Title "Contoso Pharmaceuticals" -Url "http://contoso.sharepoint.com/sites/contosopharma/" -Location "TopNavigationBar"
+Add-PnPNavigationNode -Title "Mission" -Url "http://contoso.sharepoint.com/sites/contosopharma/mission" -Location "TopNavigationBar" -Parent $Node.Id
+```
+
+Adds a navigation node and a subnode to the Top navigation bar. The top navigation node will have the title "Contoso Pharmaceuticals" and will link to the url "http://contoso.sharepoint.com/sites/contosopharma/". The sub navigation node will have the title "Mission" and will link to the url "http://contoso.sharepoint.com/sites/contosopharma/mission".
+
 ## PARAMETERS
 
 ### -Connection
